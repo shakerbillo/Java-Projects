@@ -1,0 +1,6 @@
+My Event	Host Press Play Party	05-03-2022
+My Examination	Write Java Certification exams	15-04-2022
+My Trip	Go to Ghana to visit my family	01-05-2022
+My Examination	Write second Java Certification exams	15-07-2022
+My Birthday	Celebrate my birthday	22-09-2022
+My Examination	Write third Java Certification exams	27-12-2022

@@ -1,0 +1,132 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red21\green22\blue24;\red243\green233\blue251;\red163\green85\blue14;
+\red255\green255\blue255;\red47\green50\blue51;\red87\green92\blue96;\red67\green0\blue197;}
+{\*\expandedcolortbl;;\cssrgb\c10980\c11373\c12157;\cssrgb\c96471\c93333\c98824;\cssrgb\c70588\c41176\c5490;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c24314\c25490\c26275;\cssrgb\c41569\c43529\c45098;\cssrgb\c33725\c14118\c81569;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid201\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid301\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid401\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Point explanation \
+\
+^I *think* we all understand what's going on so far.\'a0 Oftentimes we'll be given code or an equation that we're not expected to understand, just to use. This is exactly that situation, we're given the formula, but not expected to understand how it works... That being said, we WILL\'a0dive into the math a bit when we have the code working. But first, let's look at this formula, and then take a look at what I think was confusing you (it was confusing ME, anyway!).\cb1 \uc0\u8232 \u8232 \cb3 The instructions tell us this:\cb1 \uc0\u8232 \cb3 How to find the distance between two points?To find a distance between points A(xA,yA) and B(xB,yB),\cb1 \
+\cb3 we use the formula: d(A,B)=\uc0\u8730  (xB \u8722  xA) * (xB - xA) + (yB \u8722  yA) * (yB - yA) Where \u8730  represents square root.\cb1 \
+\
+\cb3 ^So, looking at this, immediately my eyes glaze over and I start shaking and foaming at the mouth. Fortunately that didn't last too long, and I was able to start to pull it apart a bit. The first thing to notice is that we'll always be comparing two SETS\'a0of points, an x and y from 2 different sets. For example, we may have (2, 5) and (7, 3). The idea is, if we have two different points on a graph, and draw a straight line through them, how long is that distance? This helps up understand this portion:\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs25\fsmilli12600 \cf4 \cb5 distance between points A(xA,yA) and B(xB,yB)
+\f0\fs28 \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Now, this is telling us that we have two Points, A, and B. Each Point has 2 co-ordinates, x and y. Like (2, 5) and (7, 3) from above. The next confusing thing is this:\cb1 \uc0\u8232 \cb3 d(A,B)=\cb1 \uc0\u8232 \cb3 What the?!??? Crazy math-gibberish! Actually, when taking a step back, it starts to make more sense, the d is distance, and A and B are our Points. So this is saying:\cb1 \uc0\u8232 \cb3 The distance between Points A and B equals\cb1 \uc0\u8232 \cb3 Oh, OK, so, that's not so mysterious, now we get this WEIRD\'a0equation they want us to use:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 (xB \uc0\u8722  xA) * (xB - xA) + (yB \u8722  yA) * (yB - yA)
+\f0\fs28 \cf2 \cb1 \uc0\u8232 \cb3 It looks so strange... I mean, we have xB-xA TWICE... and yB - yA TWICE... HOW\'a0DOES\'a0THIS\'a0DO\'a0ANYTHING???\cb1 \uc0\u8232 \cb3 Ok. ok... deep breath... For now, we don't need to understand what this is DOING, just HOW\'a0to use it. Think of it like encapsulation, or an interface, we don't need to know HOW\'a0the engine in our car works, just how to USE it with the gas pedal and brake. For now, we're going to do THAT, then we'll look at WHAT\'a0it's doing as BONUS (booonuuus! :-D ).\cb1 \uc0\u8232 \cb3 Simplifying this, it's basically giving us 4 variables (if you like to think of random unrelated things in programming terms... like I do... obviously...): xA, yA, xB, yB\cb1 \uc0\u8232 \cb3 These refer to the x and y co-ordinates in each point, point A and B, and it goes back to the description when it said:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 distance between points A(xA,yA) and B(xB,yB)
+\f0\fs28 \cf2 \cb1 \
+\cb3 To make this a bit easier, let's say that A is the "this" Point (the x and y instance variables at the VERY\'a0top of the class!), and B is the other point. We'll tackle this first method:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+    \cf4 public\cf2  \cf4 double\cf2  distance() \{\cf6 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+        \cf7 //FIX THIS, NOT IMPLEMENTED\cf6 \cb1 \
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+        \cf4 return\cf2  -1.0 \cf7 // return the distance between this Point and Point 0,0 as double\cf6 \cb1 \
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+    \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 ^I put return -1.0 just so it could compile and run with no errors, it doesn't actually DO\'a0anything, it just keeps all those red-wavy lines away while we're fixing our code, lol (I'm a bit anal about that). Anyway, we need to return the distance between "this" Point (our instance variables!) and Point(0,0). So, let's write down what are variables are, in the same notation as the formula we'll be using:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 (xB \uc0\u8722  xA) * (xB - xA) + (yB \u8722  yA) * (yB - yA)
+\f0\fs28 \cf2 \cb1 \
+\cb3 ^Formula!\cb1 \uc0\u8232 \cb3 xA = this.x; (the x from Point "A", our instance variable x)\cb1 \
+\cb3 yA = this.y; (the y from Point "A", our instance variable y)\cb1 \
+\cb3 xB = 0.0; (the instructions tell us to calculate between our Point and 0,0, I use 0.0 because it returns a double, by writing a decimal number, it gives me a reminder of what for the data is going to be)\cb1 \
+\cb3 yB = 0.0;\'a0 (the instructions tell us to calculate between our Point and 0,0, I use 0.0 because it returns a double, by writing a decimal number, it gives me a reminder of what for the data is going to be)\cb1 \uc0\u8232 \u8232 \cb3 Now we can just plug in our data above to the equation:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 (0.0 \uc0\u8722  xA) * (0.0 - xA) + (yB \u8722  yA) * (yB - yA)
+\f0\fs28 \cf2 \cb3 <--- xB removed and replaced with values from above!\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 (0.0 \uc0\u8722  this.x) * (0.0 - this.x) + (yB \u8722  yA) * (yB - yA)
+\f0\fs28 \cf2 \cb3 <--- xA removed and replaced with values from above!\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs25\fsmilli12600 \cf4 \cb5 (0.0 \uc0\u8722  this.x) * (0.0 - this.x) + (0.0 \u8722  yA) * (0.0 - yA)
+\f0\fs28 \cf2 \cb3 <--- yB removed and replaced with values from above!\cb1 \
+
+\f1\fs25\fsmilli12600 \cf4 \cb5 (0.0 \uc0\u8722  this.x) * (0.0 - this.x) + (0.0 \u8722  this.y) * (0.0 - this.y)
+\f0\fs28 \cf2 \cb3 <--- yA removed and replaced with values from above!\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Now, this isn't finished quite yet, because we have to return the SQUARE\'a0ROOT\'a0of this. To do that, we pass our equation to the sqrt() method, so our return looks like:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 return Math.sqrt((0.0 - this.x) * (0.0 - this.x) + (0.0 - this.y) * (0.0 - this.y));
+\f0\fs28 \cf2 \cb1 \
+\cb3 At this point, the first distance method (with no parameters) is done. You can throw it into your IDE\'a0and try it out, and it will give the correct results. It looks like this in its entirety:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\f2\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+    \cf4 public\cf2  \cf4 double\cf2  distance() \{\cf6 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+        \cf4 return\cf2  Math.sqrt((0.0 - \cf4 this\cf2 .x) * (0.0 - \cf4 this\cf2 .x) + (0.0 - \cf4 this\cf2 .y) * (0.0 - \cf4 this\cf2 .y));\cf6 \cb1 \
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+    \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 ^this is the long version that can (and will!) be shortened later. Do me a favor, try and tackle the second distance method (that receives 2 ints), and I'll walk us through the third one (after which we'll look at what the math is doing).\cb1 \
+\cb3 Looking at the third distance method had me scratching my head for awhile. The solution above, remember, looks like:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 return Math.sqrt( (getX() - xy.getX()) * ( getX() - xy.getX()) + (getY() - xy.getY() ) * (getY() - xy.getY()));
+\f0\fs28 \cf2 \cb1 \
+\cb3 ^First, I was freaked out by the insane amount of mathiness (just made that up... let's make it a word), and what THE\'a0HECK is this xy.getx() stuff doing!?!?\'a0 I was looking for an xy variable or method... I didn't see ANYTHING! Then it jumped out... xy is the PARAMETER of THIS\'a0method:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 public double distance(Point xy)
+\f0\fs28 \cf2 \cb3  \cb1 \uc0\u8232 \cb3 ^xy is the NAME\'a0of the Point we're given! oh! Since we already have x and y, I was trying to figure out if we were multiplying them, or? Nope, just confusing because of the name. So, for this exercise I changed the name to what was suggested in the exercise, "another". The wording on that part of the exercise hurts my brain a bit (I'll be discussing this with Goran), I'm not quite sure how to make it more clear, but I think re-wording the instructions will help. Anyway, the text says to return:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 return the distance between this Point and another Point as double
+\f0\fs28 \cf2 \cb3  \cb1 \uc0\u8232 \cb3 ^Remember, "this" Point is, basically, the x and y IN\'a0the class, "another" Point is what's given to the method, an object of type Point, named "another".\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f2\fs24 \cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+    \cf4 public\cf2  \cf4 double\cf2  distance(Point another) \{\cf6 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+        \cf7 //FIX THIS, NOT IMPLEMENTED\cf6 \cb1 \
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+        \cf4 return\cf2  -1.0; \cf7 // return the distance between this Point and another Point as double\cf6 \cb1 \
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+    \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 Here's our equation again:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 (xB \uc0\u8722  xA) * (xB - xA) + (yB \u8722  yA) * (yB - yA)
+\f0\fs28 \cf2 \cb1 \
+\cb3 And the names for our variables:\cb1 \uc0\u8232 \cb3 xA = this.x; (the x from Point "A", our instance variable x)\cb1 \
+\cb3 yA = this.y; (the y from Point "A", our instance variable y)\cb1 \
+\cb3 xB = x from another, or another.x\cb1 \
+\cb3 yB = y from another, or another.y\cb1 \uc0\u8232 \cb3 When you plug this into the formula you get:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f2\fs24 \cf4 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+return\cf2  Math.sqrt((another.x - \cf4 this\cf2 .x) * (another.x - \cf4 this\cf2 .x) + (another.y - \cf4 this\cf2 .y) * (another.y - \cf4 this\cf2 .y));\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 ^Again, this can be shortened. So, how'd you do, were you able to write the second distance method?\cb1 \uc0\u8232 \cb3 The final distance method ends up as:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0
+\f2\fs24 \cf4 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+public\cf2  \cf4 double\cf2  distance(Point another) \{\cf6 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+    \cf4 return\cf2  Math.sqrt((another.x - \cf4 this\cf2 .x) * (another.x - \cf4 this\cf2 .x) + (another.y - \cf4 this\cf2 .y) * (another.y - \cf4 this\cf2 .y));\cf6 \cb1 \
+\ls5\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 Alright, we'll get into the (shudder) math now. If we plot the co-ordinates on a graph, and draw a ling through them, we'll have a straight line. If we turn this into a right triangle (by adding the other two sides), we can then use the Pythagorean theorem to figure out the length of the line. If you remember back, the Pythagorean theorem is:\cb1 \uc0\u8232 \cb3 a squared plus b squared equals c squared.\cb1 \uc0\u8232 \cb3 Or\cb1 \uc0\u8232 \cb3 a^2 + b^2 = c^2\cb1 \uc0\u8232 \cb3 If we reverse that we have:\cb1 \uc0\u8232 \cb3 c^2 = a^2 + b^2\cb1 \uc0\u8232 \cb3 Remember how we can "undo" multiplication by using division, and we can "undo" addition by using subtraction? In the same way, we can use the square root to "undo" squaring something, so our theorem can be re-written:\cb1 \uc0\u8232 \cb3 c = \uc0\u8730  (a^2 + b^2)\cb1 \uc0\u8232 \cb3 Additionally, a squared number is just a number multiplied by itself, so it can be re-written again as:\cb1 \uc0\u8232 \cb3 c = \uc0\u8730  ( a * a) + (b * b)\cb1 \uc0\u8232 \cb3 ^Now, this starts to look remarkably similar to our equation:\cb1 \uc0\u8232 
+\f1\fs25\fsmilli12600 \cf4 \cb5 d(A,B)=\uc0\u8730  (xB \u8722  xA) * (xB - xA) + (yB \u8722  yA) * (yB - yA)
+\f0\fs28 \cf2 \cb3  \cb1 \uc0\u8232 \cb3 ^The biggest reason it looks different at this point is, each Point (A and B) have 2 co-ordinates EACH, x and y. That's why in our equation we have xA, yA. xB. ad yB.\cb1 \uc0\u8232 \cb3 For more (and better) explaination, see the following web page. The video is really good, the guy breaks out graphs and markers and has quite a math-party. lol :-D\cb1 \uc0\u8232 {\field{\*\fldinst{HYPERLINK "https://www.mathwarehouse.com/algebra/distance_formula/index.php"}}{\fldrslt \cf8 \cb3 https://www.mathwarehouse.com/algebra/distance_formula/index.php}}\uc0\u8232 \u8232 \cb3 If you want to work on reducing the redundancy in the code, post your solution for the 2nd distance method, and we'll take a look. Also, if you're still stuck, or I've succeeded in confusing you more (oops!), let me know, if you still WANT to understand, and don't, we'll find a way! :-D\cb1 \uc0\u8232 \cb3 -LeRoy3rd}
