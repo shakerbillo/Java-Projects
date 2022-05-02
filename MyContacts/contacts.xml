@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<first_name>Emmanuel </first_name>
+	<last_name>Gyan-Amoah</last_name>
+	<phone_number>33434343</phone_number>
+	<notes>The Billionaire</notes>
+</contact>
+<contact>
+	<first_name>Agyei </first_name>
+	<last_name>Kissi </last_name>
+	<phone_number>4775567484</phone_number>
+	<notes>Thats Agyei</notes>
+</contact>
+<contact>
+	<first_name>Moses </first_name>
+	<last_name>Appiah</last_name>
+	<phone_number>304854897584</phone_number>
+	<notes>Mos</notes>
+</contact>
+<contact>
+	<first_name>Vasilis</first_name>
+	<last_name>Magoulas</last_name>
+	<phone_number>484747383</phone_number>
+	<notes>The Manager </notes>
+</contact>
+<contact>
+	<first_name>Shaker </first_name>
+	<last_name>Billo</last_name>
+	<phone_number>4857657489</phone_number>
+	<notes>The Billionaire </notes>
+</contact>
+</contacts>
